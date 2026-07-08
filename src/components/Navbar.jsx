@@ -1,13 +1,18 @@
-import { Link } from 'react-router-dom'
-import logo from '../assets/coffeegeneylogo.jpg'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Navbar() {
-  return (
-    <nav className="w-full px-[15%] py-[25px] flex justify-between items-center absolute top-0 left-0">
-      <img className="h-[100px] rounded-full ml-0 " src={logo} alt="Logo" />
+  const navigate = useNavigate()
 
-      <div className="flex gap-[30px]">
-        <Link to="/" className="no-underline text-[#2d1e17] font-medium transition duration-300 hover:text-[#8b5e3c] mr-8">
+  return (
+    <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl px-8 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md rounded-full shadow-lg z-50 animate-[slideDown_0.6s_ease-out]">
+      <Link to="/" className="no-underline">
+        <span className="text-2xl font-bold text-[#2d1e17] tracking-tight">
+          Coffee <span className="text-[#8b5e3c]">Geney</span>
+        </span>
+      </Link>
+
+      <div className="flex items-center gap-8">
+        <Link to="/" className="no-underline text-[#2d1e17] font-medium transition duration-300 hover:text-[#8b5e3c]">
           Home
         </Link>
         <Link to="/menu" className="no-underline text-[#2d1e17] font-medium transition duration-300 hover:text-[#8b5e3c]">
@@ -18,9 +23,6 @@ function Navbar() {
         </Link>
         <Link to="/contact" className="no-underline text-[#2d1e17] font-medium transition duration-300 hover:text-[#8b5e3c]">
           Contact
-        </Link>
-        <Link to="/reservation" className="no-underline text-[#2d1e17] font-medium transition duration-300 hover:text-[#8b5e3c]">
-          Reservation
         </Link>
       </div>
     </nav>
