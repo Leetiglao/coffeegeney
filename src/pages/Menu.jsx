@@ -11,7 +11,7 @@ function Menu() {
   const sectionRefs = useRef({})
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/menu')
+    fetch('https://coffeegeney-api.onrender.com/api/menu')
       .then((res) => res.json())
       .then((data) => {
         setMenuItems(data)

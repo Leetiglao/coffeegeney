@@ -42,9 +42,9 @@ function Home() {
 
         <div className="flex-1 animate-[fadeInUp_1s_ease-out]">
           <img
-            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+            src="https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/625003964_1503213191813838_6246052779838316595_n.jpg?stp=dst-jpg_tt6&cstp=mx1640x924&ctp=s1640x924&_nc_cat=100&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGGA7MLSp2FEbZIHw16qY0TVwrbgPC5DehXCtuA8LkN6Ib62eLTOLWR-1HPsK5LnUiG567EG8KW35T4k2_YaBQd&_nc_ohc=V-O1VTBL698Q7kNvwEXMIXZ&_nc_oc=AdolESFICD3pICCajyEk8u3yTeTfQpb8pIAumHezCGHOIAXeOmamMoonhL4nXOY3qcU&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=CLzQfIcCFiyBSV44To5j1w&_nc_ss=7b2a8&oh=00_AQBj17ScHJJq6uJe6Skhjx3OzwRhq-piAn31sro1inampg&oe=6A54AF41"
             alt="Coffee"
-            className="w-full max-w-md mx-auto rounded-3xl shadow-2xl object-cover"
+            className="w-200  rounded-3xl shadow-2xl object-cover"
           />
         </div>
       </section>
@@ -52,7 +52,7 @@ function Home() {
       {/* ABOUT TEASER */}
       <section className="px-[10%] py-24 bg-white flex flex-col md:flex-row items-center gap-16">
         <img
-          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24"
+          src="https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/499972236_1271018618366631_4302065422726417738_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1080&ctp=s1080x1080&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHCYMsZsfN9ffU3LftPFCiuCK0P_rb7X3kIrQ_-tvtfeVIpl31Kqohz-3ji5n-nzYj6ojM6qg4GeR-9aFgDGlkg&_nc_ohc=9yObf36iZYIQ7kNvwEnZQwt&_nc_oc=AdrAmiOVw_XolPOsAE7kkJplwRNeKw9nG2sQTbbnRX9JFzp9xy8ALkS9Dan9KUS9ANI&_nc_zt=23&_nc_ht=scontent.fmnl33-5.fna&_nc_gid=YVqQmyCcOrK1UEIkqKaukw&_nc_ss=7b2a8&oh=00_AQASn0NQxScM_KkrSNlL-L4ii0lTJEwOTwQkSeqRx93jIA&oe=6A55129E"
           alt="Coffee shop interior"
           className="flex-1 rounded-3xl shadow-lg w-full max-w-md object-cover"
         />
