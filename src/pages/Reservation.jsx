@@ -19,7 +19,6 @@ function Reservation() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // TODO: replace with fetch POST to your backend once /api/reservations exists
     console.log('Reservation submitted:', form)
     setSubmitted(true)
   }
@@ -28,11 +27,11 @@ function Reservation() {
     return (
       <>
         <Navbar />
-        <section className="min-h-screen flex items-center justify-center bg-[#f6f1eb] px-[10%]">
-          <div className="text-center bg-white rounded-3xl shadow-lg p-12 max-w-md animate-[fadeInUp_0.6s_ease-out]">
+        <section className="min-h-screen flex items-center justify-center bg-[#f6f1eb] px-6">
+          <div className="text-center bg-white rounded-3xl shadow-lg p-8 md:p-12 max-w-md animate-[fadeInUp_0.6s_ease-out]">
             <div className="text-5xl mb-4">☕</div>
-            <h1 className="text-3xl font-bold text-[#2d1e17] mb-3">You're all set!</h1>
-            <p className="text-[#5c4433] mb-6">
+            <h1 className="text-2xl md:text-3xl font-bold text-[#2d1e17] mb-3">You're all set!</h1>
+            <p className="text-[#5c4433] mb-6 text-sm md:text-base">
               We've received your reservation for {form.guests} {form.guests === '1' ? 'guest' : 'guests'} on{' '}
               {form.date} at {form.time}. We'll see you soon!
             </p>
@@ -51,25 +50,23 @@ function Reservation() {
   return (
     <>
       <Navbar />
-      <section className="min-h-screen bg-[#f6f1eb] pt-40 pb-20 px-[10%]">
+      <section className="min-h-screen bg-[#f6f1eb] pt-32 md:pt-40 pb-16 md:pb-20 px-6 md:px-[10%]">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12 animate-[fadeInUp_0.6s_ease-out]">
-            <p className="text-[#a68a54] font-bold tracking-[3px] mb-3">RESERVATION</p>
-            <h1 className="text-5xl font-bold text-[#2d1e17] mb-4">Book Your Table</h1>
-            <p className="text-[#5c4433] max-w-md mx-auto">
+          <div className="text-center mb-10 md:mb-12 animate-[fadeInUp_0.6s_ease-out]">
+            <p className="text-[#a68a54] font-bold tracking-[3px] mb-3 text-sm md:text-base">RESERVATION</p>
+            <h1 className="text-3xl md:text-5xl font-bold text-[#2d1e17] mb-4">Book Your Table</h1>
+            <p className="text-[#5c4433] max-w-md mx-auto text-sm md:text-base">
               Secure your spot at Coffee Geney — we'll have it ready for you.
             </p>
           </div>
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-3xl shadow-lg p-8 md:p-10 animate-[fadeInUp_0.8s_ease-out]"
+            className="bg-white rounded-3xl shadow-lg p-6 md:p-10 animate-[fadeInUp_0.8s_ease-out]"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-6">
               <div>
-                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">
-                  Full Name
-                </label>
+                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">Full Name</label>
                 <input
                   type="text"
                   name="name"
@@ -82,9 +79,7 @@ function Reservation() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">
-                  Email
-                </label>
+                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -97,9 +92,7 @@ function Reservation() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">
-                  Date
-                </label>
+                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">Date</label>
                 <input
                   type="date"
                   name="date"
@@ -111,9 +104,7 @@ function Reservation() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">
-                  Time
-                </label>
+                <label className="block text-sm font-semibold text-[#2d1e17] mb-2">Time</label>
                 <input
                   type="time"
                   name="time"
@@ -126,9 +117,7 @@ function Reservation() {
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-semibold text-[#2d1e17] mb-2">
-                Number of Guests
-              </label>
+              <label className="block text-sm font-semibold text-[#2d1e17] mb-2">Number of Guests</label>
               <select
                 name="guests"
                 value={form.guests}
@@ -136,9 +125,7 @@ function Reservation() {
                 className="w-full px-4 py-3 rounded-xl border border-[#e5dcd0] focus:outline-none focus:ring-2 focus:ring-[#a68a54] transition"
               >
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
-                  <option key={n} value={n}>
-                    {n} {n === 1 ? 'Guest' : 'Guests'}
-                  </option>
+                  <option key={n} value={n}>{n} {n === 1 ? 'Guest' : 'Guests'}</option>
                 ))}
               </select>
             </div>
@@ -159,7 +146,7 @@ function Reservation() {
 
             <button
               type="submit"
-              className="w-full bg-[#6f4e37] text-white py-4 rounded-xl font-semibold text-lg hover:bg-[#5c3f2c] transition"
+              className="w-full bg-[#6f4e37] text-white py-4 rounded-xl font-semibold text-base md:text-lg hover:bg-[#5c3f2c] transition"
             >
               Confirm Reservation
             </button>
